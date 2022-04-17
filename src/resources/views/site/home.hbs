@@ -1,0 +1,179 @@
+<section class="home-slider js-fullheight owl-carousel bg-white">
+	{{#home.slide}}
+      <div class="slider-item js-fullheight">
+      	<div class="overlay"></div>
+        <div class="container-fluid p-0">
+          <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+          	<div class="one-third order-md-last img js-fullheight" style="background-image:url(images/{{image}});">
+          		<div class="overlay"></div>
+          	</div>
+	          <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+	          	<div class="text mt-md-5">
+		            <h1 class="mb-4">{{{h1}}}</h1>
+		            <p>{{slogan}}</p>
+		            <p><a href="#bookATable" class="btn btn-primary px-4 py-3 mt-3">Book A Table</a></p>
+	            </div>
+	          </div>
+        	</div>
+        </div>
+      </div>
+	{{/home.slide}}
+</section>
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-sm-5 img img-2 d-flex align-items-center justify-content-center justify-content-md-end" style="background-image: url(images/about.jpg); position: relative"></div>
+					<div class="col-sm-7 wrap-about py-5 ftco-animate">
+						<div class="heading-section mt-5 mb-4">
+							<div class="pl-lg-5 ml-md-5">
+								<span class="subheading">About</span>
+								<h2 class="mb-4">Welcome to {{home.brandName}}</h2>
+							</div>
+						</div>
+						<div class="pl-lg-5 ml-md-5">
+							<p>{{home.description}}</p>
+							<h3 class="mt-5">Special Recipe</h3>
+							<div class="thumb my-4 d-flex">
+								{{#menu}}
+								<a href="/products/{{slug}}" class="thumb-menu pr-md-4 text-center">
+									<div class="img" style="background-image: url(images/{{image}});border-radius: 5%;"></div>
+									<h4>{{name}}</h4>
+								</a>
+								{{/menu}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row d-md-flex align-items-center justify-content-center">
+    			<div class="col-lg-10">
+    				<div class="row d-md-flex align-items-center">
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number">3</strong>
+		                <span>Years of Experienced</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="20000">0</strong>
+		                <span>Happy Customers</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="564">0</strong>
+		                <span>Finished Projects</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number"><script>document.write(Math.round(Math.abs((new Date()- new Date(2021, 1, 1)) / (24 * 60 * 60 * 1000))));</script></strong>
+		                <span>Working Days</span>
+		              </div>
+		            </div>
+		          </div>
+	          </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+
+<section class="ftco-section testimony-section" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          	<span class="subheading">Testimony</span>
+            <h2 class="mb-4">Happy Customer</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate justify-content-center">
+          <div class="col-md-7">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              {{#customer}}
+			  <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text p-3">
+                    <p class="mb-4">{{text}}</p>
+                    <p class="name">{{name}}</p>
+                    <span class="position">{{position}}</span>
+                  </div>
+                </div>
+              </div>
+			  {{/customer}}
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+			
+
+		<section class="ftco-section ftco-no-pt ftco-no-pb" >
+			<div class="container" id="bookATable">
+				<div class="row d-flex">
+          <div class="col-md-5 ftco-animate img img-2" style="background-image: url(images/bg_6.jpg);"></div>
+          <div class="col-md-7 ftco-animate makereservation p-4 p-md-5">
+          	<div class="heading-section ftco-animate mb-5">
+	          	<span class="subheading">Book a Table</span>
+	            <h2 class="mb-4">Make Reservation</h2>
+	          </div>
+            <form action="/" method="POST">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" placeholder="Your Name" name="name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" placeholder="Your Email" name="email">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="text" class="form-control" placeholder="Phone" name="phone">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Time</label>
+                    <input type="text" class="form-control" id="book_time" placeholder="Time" name="time">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Person</label>
+                    <input type="text" class="form-control" id="person" placeholder="Person" name="person">	
+                  </div>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <div class="form-group">
+                    <input type="submit" value="Make a Reservation" class="btn btn-primary py-3 px-5">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+			</div>
+</section>

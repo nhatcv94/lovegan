@@ -1,0 +1,26 @@
+<div class="container">
+    <h3>Cập nhật món<canvas></canvas></h3>
+        <form method="POST" action="/products/{{product._id}}?_method=PUT">
+            <div class="form-group">
+                <label for="name">Tên món</label>
+                <input type="text" class="form-control" value="{{product.name}}" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="description">Mô tả</label>
+                <textarea class="form-control" id="description" name="description">{{product.description}}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="type">Type</label>
+                <input type="text" class="form-control" value="{{product.type}}" id="type" name="type">
+            </div>
+                <div class="form-group">
+                <label for="image">Image URL</label>
+                <input type="text" class="form-control" id="image" name="image" value="{{product.image}}">
+            </div>
+            <div class="form-group">
+            <label for="pride">Pride</label>
+            <input type="text" class="form-control" id="pride" name="pride" value="{{product.pride}}">
+            </div>
+            <button type="submit" class="btn btn-primary">Lưu lại</button>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+<div class="container" style="margin-top: 10%; margin-bottom: 3%;">
+    <div class="row">
+        {{#each products}}
+        <div class="col-sm-4 col-sm-4 col-sm-4" style="width: 300px; height:600px;">
+            <div class="card card-product-item" style="width: 300px;">
+                <a href="/products/{{this.slug}}"><img src="images/{{this.image}}" class="card-img-top" alt="{{this.name}}"></a>
+                <div class="card-body">
+                    <a href="/products/{{this.slug}}"><h5 class="card-title">{{this.name}}</h5></a>
+                    <p class="card-text">{{this.description}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
